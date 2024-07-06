@@ -266,7 +266,8 @@ body {
 .product img {
   width: 100%; 
   height: auto; 
-  object-fit: cover; 
+  object-fit: cover;
+} 
 
   /* referente a area do formulário*/
 
@@ -304,6 +305,4 @@ body {
     color: #021553;
     text-align: center;
     padding: 1rem 0;
-
 }
-
