@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+
+<form method= "post">
+    {% csrf_token %}
+    <button type= "submit" class="btn btn-success">
+        Confirmar Exclusão
+    </button>
+</form>
+
+{% endblock %}

@@ -297,26 +297,17 @@
                     <div class="form-container">
                         <h1 class="form-title">ORÇAMENTOS</h1>
                         <p>Preencha o formulário abaixo para solicitar seu orçamento personalizado.</p>
-                <form>
-                <div class="form-group">
-                    <label for="nome">NOME</label>
-                    <input type="text" id="nome" name="nome" required>
-                </div>
-                <div class="form-group">
-                    <label for="whatsapp">WHATSAPP</label>
-                    <input type="tel" id="whatsapp" name="whatsapp" required>
-                </div>
-                <div class="form-group">
-                    <label for="modelos">MODELOS</label>
-                    <input type="text" id="modelos" name="modelos" required>
-                </div>
-                <div class="form-group">
-                    <label for="segmento">SEGMENTO</label>
-                    <input type="text" id="segmento" name="segmento" required>
-                </div>
-                    <button type="button" class="form-button">CLIQUE AQUI PARA INSERIR SEU LOGO</button>
-                    <button type="submit" class="form-button">SOLICITAR ORÇAMENTO</button>
+
+                {% extends "base.html" %}
+
+                {% block conteudo %}
+
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form. as_p }}
+                    <button type="submit" class="btn btn-success">SOLICITAR ORÇAMENTO</button>
                 </form>
+                {% endblock %}
                     
             </section>
             

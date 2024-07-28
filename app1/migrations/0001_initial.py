@@ -17,6 +17,8 @@ class Migration(migrations.Migration):
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('nome', models.CharField(max_length=100)),
                 ('whatsapp', models.CharField(max_length=11)),
+                ('modelos', models.CharField(max_length=11)),
+                ('segmentos', models.CharField(max_length=11)),
             ],
         ),
     ]

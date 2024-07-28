@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+
+<table class="table taable-bordered border-danger">
+{% for cliente in clientes %}
+    <tr>
+        <td>{{cliente.nome}}</td>
+        <td>{{cliente.WhatsApp}}</td>
+        <td><a href="{% url 'editar' pk=cliente.id %}">Editar</a></td>
+        <td><a href="{% url 'excluir' pk=cliente.id %}">Excluir</a></td>
+    </tr>
+{% endfor %}
+</table>
+<a href="inserir">Inserir</a>
+
+{% endblock %}
